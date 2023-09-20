@@ -1,0 +1,57 @@
+*{
+  font-family:cursive;
+  text-align: center;
+  background-color: rgb(196, 235, 222);
+  margin: 0;
+}
+body {
+  margin: 0 150px;
+  max-width: 1200px 0;
+}
+h1 {
+  margin: 5% auto;
+  font-size: 3rem;
+  color: rgb(2, 54, 72);
+}
+div > * {
+  height: 30px;
+}
+input {
+  text-align: left;
+  font-size: 20px;
+  height: 40px;
+  border-radius: 3px;
+  border: 3px solid black;
+}
+input:hover {
+  background-color: rgb(213, 232, 250);
+  box-shadow: 7px 12px 9px -1px rgba(150, 150, 150, 0.05);
+}
+button {
+  margin: 5px;
+  font-size: 20px;
+  box-shadow: 0 0 3 5;
+  height: 40px;
+  width: 110px;
+  border-radius: 3px;
+  border: 3px solid black;
+  background-color: aquamarine;
+  box-shadow: 7px 9px 7px -1px rgba(164, 164, 164, 0.479)
+}
+
+button:hover {
+  background-color: aqua;
+  transition: background-color 1s linear ;
+  font-size: 20px;
+  font-weight: bold;
+}
+button:active {
+  background-color: blueviolet;
+  transition: background-color 0.8ms linear;
+  margin-top: 10px;
+  box-shadow: 7px 12px 9px -1px rgba(150, 150, 150, 0.05)
+}
+ol>li {
+  text-align: left;
+  font-size: 20px;
+}
