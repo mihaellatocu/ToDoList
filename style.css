@@ -137,9 +137,12 @@ ol li span:hover {
   background-color: rgb(142, 184, 184);
   color: red;
 }
+.container_clear {
+
+}
 #clear {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+  top: 15px;
   background-color: rgb(2, 54, 72);
   font-weight: 600;
   color: #fff;

@@ -1,4 +1,3 @@
-
 const taskInput = document.getElementById('taskInput');
 let button = document.getElementById('btn');
 let taskList = document.getElementById('task-List');
@@ -60,22 +59,3 @@ function removeStorage() {
 }
 
 clear.addEventListener('click', removeStorage);
-
-
-// addTask.onclick = function addlst() {
-
-//   let timer = new Date()
-
-//   lst.innerHTML += `<div>${textbox.value}</div>`
-
-//   localStorage.setItem(`${timer.getTime().toString()}`, textbox.value);
-
-//   textbox.value = ''
-
-// }
-
-// for (let i = 0; i < localStorage.length; i++) {
-
-//   lst.innerHTML += `<div>${localStorage.getItem(localStorage.key(i))}</div>`
-
-// } 
