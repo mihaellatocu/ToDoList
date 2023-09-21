@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Oleo+Script&family=Satisfy&display=swap');
 *{
-  font-family:cursive;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: rgb(196, 235, 222);
   margin: 0;
@@ -7,14 +9,20 @@
 body {
   margin: 0 150px;
   max-width: 1200px 0;
+  position: relative;
+  height: 100vh;
 }
 h1 {
   margin: 5% auto;
   font-size: 3rem;
   color: rgb(2, 54, 72);
+  font-family: 'Oleo Script', cursive;
 }
-div > * {
-  height: 30px;
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 input {
   text-align: left;
@@ -22,6 +30,9 @@ input {
   height: 40px;
   border-radius: 3px;
   border: 3px solid black;
+  font-family: cursive;
+  outline: none;
+  position: relative;
 }
 input:hover {
   background-color: rgb(213, 232, 250);
@@ -33,30 +44,104 @@ button {
   box-shadow: 0 0 3 5;
   height: fit-content;
   width:fit-content;
-  border-radius: 3px;
-  border: 3px solid black;
-  background-color: aquamarine;
+  min-width: 120px;
+  min-height: 40px;
+  border-radius: 5px;
+  border: 3px solid rgb(23, 23, 23);
+  background-color: rgb(2, 54, 72);
+  color: #fff;
   box-shadow: 7px 9px 7px -1px rgba(164, 164, 164, 0.479)
 }
 
 button:hover {
-  background-color: aqua;
+  height: 40px;
   transition: background-color 1s linear ;
   font-size: 20px;
   font-weight: bold;
 }
-button:active {
-  background-color: blueviolet;
+button:active,
+#clear:active {
+  background-color: rgb(242, 95, 10);
+  color: rgb(2, 54, 72);
   transition: background-color 0.8ms linear;
-  margin-top: 10px;
-  box-shadow: 7px 12px 9px -1px rgba(150, 150, 150, 0.05)
+  margin-top: 8px;
+  margin-bottom: 2px;
+  box-shadow: 7px 12px 9px -1px rgba(150, 150, 150, 0.05);
+  font-weight: 600;
 }
-ol>li {
+ol {
+  margin-top: 20px;
+}
+ol li {
   text-align: left;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: 'Satisfy', cursive;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+  user-select: none; /*select all sentence */
+  cursor: pointer;
+  color:rgb(23, 23, 23);
+  transition: color 1s;
+}
+ol li::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-image: url(/ToDoList/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  transition: 1s;
+}
+
+ol li:nth-child(odd) {
+  background-color: rgb(164, 221, 211);
+}
+ol li::first-letter {
+  text-transform: uppercase;
+}
+ol li.checked {
+  color: rgb(242, 95, 10);
+  text-decoration: line-through;
+  transition: all 1s;
+}
+ol li.checked::before {
+  background-image: url(images/checked.png);
+  transition: all 0.5s;         
+}
+ol li::marker {
+  font-weight: bold;
 }
 @media (max-width: 580px) {
   body {
     margin: 10px;
   }
+}
+ol li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+ol li span:hover {
+  background-color: rgb(142, 184, 184);
+  color: red;
+}
+#clear {
+  position: absolute;
+  bottom: 10px;
+  background-color: rgb(2, 54, 72);
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
 }
