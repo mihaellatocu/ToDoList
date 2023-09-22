@@ -8,9 +8,11 @@
 }
 body {
   margin: 0 150px;
-  max-width: 1200px 0;
+  max-width: 1200px;
   position: relative;
   height: 100vh;
+  flex-direction: column;
+  bottom: 0;
 }
 h1 {
   margin: 5% auto;
@@ -67,7 +69,8 @@ button:active,
   margin-top: 8px;
   margin-bottom: 2px;
   box-shadow: 7px 12px 9px -1px rgba(150, 150, 150, 0.05);
-  font-weight: 600;
+  font-weight: bold;
+  user-select: none;
 }
 ol {
   margin-top: 20px;
@@ -119,6 +122,9 @@ ol li::marker {
   body {
     margin: 10px;
   }
+  #linkedin {
+    margin-right: 20px;
+  }
 }
 ol li span {
   position: absolute;
@@ -137,14 +143,69 @@ ol li span:hover {
   background-color: rgb(142, 184, 184);
   color: red;
 }
-.container_clear {
 
-}
 #clear {
   position: relative;
-  top: 15px;
+  top: 20px;
   background-color: rgb(2, 54, 72);
-  font-weight: 600;
   color: #fff;
   text-align: center;
 }
+
+
+footer {
+  position: relative;
+  margin-bottom: 0;
+  color:rgb(23, 23, 23);
+  height: 40px;
+  max-width: 1200px;
+  margin-top: 50vh;
+  display: block;
+  
+}
+.footer_container {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+i {
+  font-family: 'Satisfy', cursive;
+}
+span {
+  color: red;
+  font-size: 18px;
+  line-height: 1.2rem;
+}
+hr {
+  margin-left: 40px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.link {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#linkedin {
+  justify-self: flex-start;
+  margin-right: 30px;
+  left: 0;
+  text-align: end;
+}
+#github {
+  color: #171515;
+  justify-self: flex-end;
+}
+#linkedin {
+  color: #0072b1;
+}
+.fa:hover  {
+  background-color: #f0ecec;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
